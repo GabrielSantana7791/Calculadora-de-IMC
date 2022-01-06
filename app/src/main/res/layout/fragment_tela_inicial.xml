@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/teal_100">>
 
         <Button
             android:id="@+id/btn_tela_inicial"
@@ -16,20 +17,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Button"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber2"
+            app:layout_constraintTop_toBottomOf="@+id/textNumber_altura"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:digits="1234567890."
+            android:id="@+id/textNumber_peso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Seu peso"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +43,7 @@
             app:layout_constraintVertical_bias="0.267" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/textNumber_altura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -47,10 +51,11 @@
             android:hint="Altura"
             android:inputType="number"
             android:minHeight="48dp"
+            android:digits="0123456789"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+            app:layout_constraintTop_toBottomOf="@+id/textNumber_peso" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

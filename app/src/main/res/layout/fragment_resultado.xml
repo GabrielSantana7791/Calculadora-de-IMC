@@ -10,33 +10,46 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/teal_100">
 
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="393dp"
-            android:layout_height="169dp"
+            android:id="@+id/txt_resultado"
+            android:layout_width="395dp"
+            android:layout_height="119dp"
             android:text="ATENÇÃO!! Você possúi obesidade mórbida, procure um médico imediatamente!"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.784"
+            app:layout_constraintTop_toBottomOf="@+id/imagem_resultado"
+            app:layout_constraintVertical_bias="0.117"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btn_resultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Voltar"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/txt_resultado" />
+
+        <ImageView
+            android:id="@+id/imagem_resultado"
+            android:layout_width="402dp"
+            android:layout_height="281dp"
+            android:src="@drawable/obesidade2"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

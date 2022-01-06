@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,9 +28,14 @@ public class Resultado extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Calculadora calculadora;
 
     public Resultado() {
         // Required empty public constructor
+    }
+
+    public Resultado(double altura, double peso){
+       calculadora = new Calculadora(altura, peso);
     }
 
     /**
@@ -68,14 +75,23 @@ public class Resultado extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         Button button = getView().findViewById(R.id.btn_resultado);
+        TextView textoResultado = getView().findViewById(R.id.txt_resultado);
+        ImageView imagemResultado = getView().findViewById(R.id.imagem_resultado);
+
+        calculadora.telaResultado(textoResultado, imagemResultado);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 FragmentTransaction fragmentTransaction = requireActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragmentContainerTelaInicial, new TelaInicial());
                 fragmentTransaction.commit();
+
             }
         });
 
     }
+
+
 }

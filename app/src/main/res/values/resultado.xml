@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="magro_drawable">@drawable/magro</drawable>
+    <drawable name="ideal_drawable">@drawable/ideal</drawable>
+    <drawable name="levemente_acima_drawable">@drawable/levemente</drawable>
+    <drawable name="obesidade1_drawable">@drawable/obesidade1</drawable>
+    <drawable name="obesidade2_drawable">@drawable/obesidade2</drawable>
+    <drawable name="obesidade3_drawable">@drawable/obesidade2</drawable>
+
+
+    <string name="magro">ATENÇÃO! Você está abaixo do peso.</string>
+    <string name="ideal">Parabéns!! Voce está no peso ideal.</string>
+    <string name="levementeAcima">Você esta levemente acima do peso.</string>
+    <string name="obesidade1">ATENÇÃO! Você possúi obesidade severa, portanto, procure ajuda médica!</string>
+    <string name="obesidade2">Alterar texto.</string>
+    <string name="obesidade3">ATENÇÃO!! Você possúi obesidade mórbida, procure um médico imediatamente!</string>
+</resources>

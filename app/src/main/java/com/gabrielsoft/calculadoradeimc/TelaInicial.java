@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +28,7 @@ public class TelaInicial extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public TelaInicial() {
         // Required empty public constructor
@@ -73,14 +75,20 @@ public class TelaInicial extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText etAltura = getView().findViewById(R.id.textNumber_altura);
+                double altura = Double.parseDouble(etAltura.getText().toString());
+
+                EditText etPeso = getView().findViewById(R.id.textNumber_peso);
+                double peso = Double.parseDouble(etPeso.getText().toString());
+
+
                 FragmentTransaction fragmentTransaction = requireActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentContainerTelaInicial, new Resultado());
+                fragmentTransaction.replace(R.id.fragmentContainerTelaInicial, new Resultado(altura, peso));
                 fragmentTransaction.commit();
             }
         });
 
     }
-
 
 
 }
