@@ -22,7 +22,7 @@ public class Calculadora {
           imagemResultado.setImageResource(R.drawable.ideal_drawable);
 
       }else if (IMC >= 25 && IMC < 30){
-          textView.setText(R.string.levementeAcima);
+          textView.setText(R.string.levemente_acima);
           imagemResultado.setImageResource(R.drawable.levemente_acima_drawable);
 
       }else if (IMC >= 30 && IMC < 35){
@@ -40,6 +40,10 @@ public class Calculadora {
 
     }
 
+    public void calcularIMC() {
+        IMC = peso / (altura * altura);
+
+    }
 
     public double getAltura() {
         return altura;
@@ -59,10 +63,5 @@ public class Calculadora {
 
     public double getIMC() {
         return IMC;
-    }
-
-    public void calcularIMC() {
-        IMC = peso / (altura * altura);
-
     }
 }
